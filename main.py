@@ -1,12 +1,24 @@
 # This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+import igl
+import meshplot
+import scipy as sp
+import numpy as np
+from meshplot import plot, subplot, interact
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    V = np.array([
+        [0., 0, 0],
+        [1, 0, 0],
+        [1, 1, 1],
+        [2, 1, 0]
+    ])
+
+    F = np.array([
+        [0, 1, 2],
+        [1, 3, 2]
+    ])
+    meshplot.offline()
+    plot(V, F)
 
 
 # Press the green button in the gutter to run the script.
